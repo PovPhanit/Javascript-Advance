@@ -1,0 +1,848 @@
+html{
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color:white;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color:lime;
+    border-radius: 10px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: sans-serif;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(150, 216, 150);
+}
+.container .header .bar-logo{
+    width: 100%;
+    background-color: rgb(14, 143, 68);
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: flex;
+    padding: 10px 0;
+    justify-content: center;
+    align-items: center;
+}
+.container .header .user i{
+    color: white;
+    margin-bottom: 10px;
+    margin-right: 14px;
+    padding: 5px 5px;
+    font-size: 25px;
+    border: 2px solid white;
+    border-radius: 8px;
+    box-shadow: -3px 4px 5px rgba(36, 35, 35, 0.83);
+    transition: all 0.3s linear;
+}
+.container .header .user i:hover{
+    background-color: black;
+}
+.container .header .user i:active{
+    transform: scale(1.3);
+}
+.container .header .user{
+    display: flex;
+    width: 35%;
+    justify-content: flex-end;
+}
+.container .header .logo{
+    display: flex;
+    width: 60%;
+    justify-content: flex-end;
+}
+.container .header .menu-bar{
+    display: flex;
+    justify-content:space-between;
+    width: 100%;
+    padding: 10px 30px;
+    background-color: rgb(83, 190, 83);
+    border-bottom: 2px solid  rgb(14, 143, 68);
+}
+.container .header .menu-bar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.container .header .menu-bar .search input{
+    width: 500px;
+    display: flex;
+    padding: 8px 13px;
+    border-radius: 12px;
+    outline: none;
+    border: 2px solid rgba(33, 32, 32, 0.489);
+    height: 40px;
+}
+.container .header .menu-bar .search{
+    position: relative;
+}
+.container .header .menu-bar .search i{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(174, 167, 167);
+    outline: none;
+    border: 2px solid rgba(79, 77, 77, 0.489);;
+    width: 40px;
+    height: 40px;
+    border-radius: 0 12px 12px 0;
+}
+.container .header .menu-bar .search:active{
+    transform: scale(1.1);
+}
+.container .header .menu-bar .icon span i.fa-border-all{
+    padding:8px 11px;
+}
+.container .header .menu-bar .icon span i{
+    color:black;
+    background-color:white;
+    font-size: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+    padding:8px 8px;
+    align-content: center;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    box-shadow: -4px 4px 5px rgba(106, 99, 99, 0.715);
+    transform: all 0.2s linear;
+}
+.container .header .menu-bar .icon span i:active{
+    transform: scale(1.2);
+}
+.container .header .menu-bar .icon span i:hover{
+    background-color: #151212;
+    color: white;
+}
+.container .header .menu-bar .icon .icon-active i{
+    background-color: #151212;
+    color: white;
+}
+.container .header .menu-bar .btn-bar a{
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: sans-serif;
+    padding: 7px 20px;
+    border-radius: 13px;
+    margin-left: 20px;
+    transform: all 0.2s linear;
+    box-shadow: -5px 5px 6px rgba(106, 99, 99, 0.715);
+}
+.container .header .menu-bar .btn-bar a:active{
+    transform: scale(1.2);
+}
+.container .header .menu-bar .btn-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .header .menu-bar .btn-bar a:hover{
+    background-color: black;
+    color: white;
+}
+.container .header .menu-bar .btn-bar a.btn-bar-active{
+    background-color: black;
+    color: white;
+}
+.content-card{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(150, 216, 150);
+    flex-wrap: wrap;
+    padding: 30px 20px;
+}
+.content-card .carts{
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    transition: all 0.2s linear;
+    width: 240px;
+    height: 275px;
+    background-color: white;
+    border-radius: 14px;
+    box-shadow: -5px 5px 7px rgba(76, 65, 65, 0.601);
+}
+.content-card .carts .Image img{
+    width: 240px;
+    height: 150px;
+    padding: 5px 5px;
+    object-fit: contain;
+    border-bottom: 2px solid black;
+}
+.content-card .carts .Content .title{
+    color: red;
+    font-size: 20px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    margin-top: 5px;
+    text-align: center;
+}
+.content-card .carts .Content .price{
+    font-weight:bold; 
+    text-align: center;
+    margin-top: 6px;
+    font-size: 18px;
+}
+.content-card .carts .Content .price span{
+    color: red;
+}
+.content-card .carts .Content .description{
+    text-align: center;
+    font-size: 18px;
+}
+.content-card .carts .Content .add-to-card{
+    transition: all 0.1s linear;
+    margin-left: 30px;
+    font-size: 16px;
+    width: 100px;
+    cursor: pointer;
+    margin-right: 8px;
+    height: 30px;
+    background-color: lime;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    font-weight: bold;
+    margin-top: 5px;
+    box-shadow: -3px 3px 5px rgba(81, 76, 76, 0.666);
+}
+.content-card .carts .Content .detail{
+    transition: all 0.1s linear;
+    cursor: pointer;
+    font-size: 16px;
+    width: 70px;
+    height: 30px;
+    background-color: rgb(0, 170, 255);
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    font-weight: bold;
+    margin-top: 5px;
+    box-shadow: -3px 3px 5px rgba(81, 76, 76, 0.666);
+}
+.content-card .carts:hover{
+    transform: scale(1.1);
+}
+.content-card .carts .Content .add-to-card:active{
+    transform: scale(1.2);
+}
+.content-card .carts .Content .detail:active{
+    transform: scale(1.2);
+}
+.content-card .carts .Content .add-to-card:hover{
+    background-color:rgb(12, 1, 56);
+}
+.content-card .carts .Content .detail:hover{
+    background-color:rgb(12, 1, 56);
+}
+                                                  /* Fixed Bar  */
+.container .header{
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+}
+.container .content-card{
+    margin-top: 140px;
+    position: absolute;
+}
+                                                  /* Fixed end  */
+
+                                                  /* Footer  */
+.container .footer{
+    width: 100%;
+    height: 350px;
+    background-color: #1a1a1a;
+    position: absolute;
+    margin-top: 1960px;
+
+}
+.container .footer.active{
+    margin-top: 800px;
+}
+
+                                                /* end footer  */
+.footer .footer-information{
+    width: 100%;
+    display: flex;
+    margin-left: -90px;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer .about{
+    margin-left: 100px;
+}
+.footer .about h1{
+    color: lime;
+    font-size: 35px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.footer .about h3{
+    color: white;
+    font-size: 25px;
+    margin-top: 15px;
+}
+.footer .about p{
+ color: white;
+ margin-top: 5px;
+ font-size: 20px;
+}
+.footer .about a{
+    display: flex;
+    margin-top: 7px;
+    font-size: 25px;
+    text-decoration: none;
+    color: lime;
+}
+.footer .about a span{
+    margin-left: 15px;
+    color: white;
+    font-size: 20px;
+}
+.footer .information ul{
+    list-style-type: none;
+}
+.footer .information ul li{
+  color: white;
+  font-size: 27px;
+  margin-top: 20px;
+}
+.footer .information ul li.infor{
+    color: lime;
+}
+.footer .Email h3{
+    color: white;
+    font-size: 25px;
+    margin-top: 15px;
+}
+.footer .Email input{
+    width: 200px;
+    height: 30px;
+    font-size: 17px;
+    padding: 0px 30px;
+    border-radius: 7px;
+    box-shadow: 5px;
+    margin-top: 8px;
+}
+.footer .Email .iconEmail{
+    position: relative;
+}
+.footer .Email i{
+    margin-top: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border-right: 2px solid black;
+    color: lime;
+    font-weight: bolder;
+    width: 30px;
+    height: 30px;
+}
+.footer .Email button{
+    cursor: pointer;
+    width: 80px;
+    height: 30px;
+    margin-top: 10px;
+    background-color: rgb(36, 167, 36);
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    box-shadow: -2px 2px 4px rgba(255, 255, 255, 0.543);
+    font-weight: bold;
+    outline: none;
+    transition: all 0.2s linear;
+    font-size: 16px;
+    padding: 5px 5px;
+}
+.footer .Email button:active{
+    transform: scale(1.1);
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer .logo-footer{
+    width: 85%;
+    margin-top: 10px;
+   border-top: 5px solid lime;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer .logo-footer i{
+    color: lime;
+    font-size: 39px;
+    padding: 10px 10px;
+}
+                                   /* Responsive  */
+                                                /* max-width:310 */
+@media (min-width:310px){
+     .container .footer{
+        margin-top: 10490px;
+        background-color:black;
+        height: 270px;
+    }
+    .container .footer.active{
+        margin-top: 2530px;
+        background-color:black;
+    }
+    .footer .about h1{
+        font-size: 16px;
+    }
+    .footer .about h3{
+        font-size: 14px;
+    }
+    .footer .about p{
+    font-size: 12px;
+    }
+    .footer .about a{
+        font-size: 16px;
+    }
+    .footer .about a span{
+        font-size: 14px;
+    }
+.footer .information ul li{
+  font-size: 12px;
+}
+
+.footer .Email h3{
+    font-size: 14px;
+}
+.footer .Email input{
+    width: 130px;
+    height: 30px;
+    font-size: 10px;
+    border-radius: 7px;
+    box-shadow: 5px;
+    margin-top: 8px;
+}
+
+.footer .Email button{
+    font-size: 12px;
+    padding: 5px 5px;
+}
+
+.footer .logo-footer i{
+    font-size: 32px;
+}
+
+}
+                                                /* max-width:560 */
+@media (min-width:560px){
+    .container .footer{
+        height: 350px;
+        margin-top: 5490px;
+        background-color:black;
+        height: 270px;
+    }
+    .container .footer.active{
+        margin-top: 1350px;
+        background-color:black;
+    }
+    .footer .about h1{
+        font-size: 16px;
+    }
+    .footer .about h3{
+        font-size: 14px;
+    }
+    .footer .about p{
+    font-size: 12px;
+    }
+    .footer .about a{
+        font-size: 16px;
+    }
+    .footer .about a span{
+        font-size: 14px;
+    }
+.footer .information ul li{
+  font-size: 12px;
+}
+
+.footer .Email h3{
+    font-size: 14px;
+}
+.footer .Email input{
+    width: 130px;
+    height: 30px;
+    font-size: 10px;
+    border-radius: 7px;
+    box-shadow: 5px;
+    margin-top: 8px;
+}
+
+.footer .Email button{
+    font-size: 12px;
+    padding: 5px 5px;
+}
+
+.footer .logo-footer i{
+    font-size: 32px;
+}
+}
+                                                /* max-width:820 */
+@media (min-width:820px){
+    .container .footer{
+        height: 350px;
+        margin-top: 3720px;
+        background-color:black;
+    }
+    .container .footer.active{
+        margin-top: 1060px;
+        background-color:black;
+    }
+    .footer .about h1{
+        font-size: 20px;
+    }
+    .footer .about h3{
+        font-size: 18px;
+    }
+    .footer .about p{
+    font-size: 16px;
+    }
+    .footer .about a{
+        font-size: 20px;
+    }
+    .footer .about a span{
+        font-size: 18px;
+    }
+.footer .information ul li{
+  font-size: 18px;
+}
+
+.footer .Email h3{
+    font-size: 18px;
+}
+.footer .Email input{
+    width: 130px;
+    height: 30px;
+    font-size: 10px;
+    border-radius: 7px;
+    box-shadow: 5px;
+    margin-top: 8px;
+}
+
+.footer .Email button{
+    font-size: 12px;
+    padding: 5px 5px;
+}
+
+.footer .logo-footer i{
+    font-size: 32px;
+}
+}
+                                                                /* max-width:1080 */
+@media (min-width:1080px){
+    .container .footer{
+        height: 350px;
+        margin-top: 2835px;
+        background-color:black;
+    }
+    .container .footer.active{
+        margin-top: 780px;
+        background-color:black;
+    }
+    .footer .footer-information{
+        width: 100%;
+        display: flex;
+        margin-left: -90px;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .footer .about{
+        margin-left: 100px;
+    }
+    .footer .about h1{
+        color: lime;
+        font-size: 35px;
+        font-family: sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+    .footer .about h3{
+        color: white;
+        font-size: 25px;
+        margin-top: 15px;
+    }
+    .footer .about p{
+     color: white;
+     margin-top: 5px;
+     font-size: 20px;
+    }
+    .footer .about a{
+        display: flex;
+        margin-top: 7px;
+        font-size: 25px;
+        text-decoration: none;
+        color: lime;
+    }
+    .footer .about a span{
+        margin-left: 15px;
+        color: white;
+        font-size: 20px;
+    }
+    .footer .information ul{
+        list-style-type: none;
+    }
+    .footer .information ul li{
+      color: white;
+      font-size: 27px;
+      margin-top: 20px;
+    }
+    .footer .information ul li.infor{
+        color: lime;
+    }
+    .footer .Email h3{
+        color: white;
+        font-size: 25px;
+        margin-top: 15px;
+    }
+    .footer .Email input{
+        width: 200px;
+        height: 30px;
+        font-size: 17px;
+        padding: 0px 30px;
+        border-radius: 7px;
+        box-shadow: 5px;
+        margin-top: 8px;
+    }
+    .footer .Email .iconEmail{
+        position: relative;
+    }
+    .footer .Email i{
+        margin-top: 8px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: none;
+        border-right: 2px solid black;
+        color: lime;
+        font-weight: bolder;
+        width: 30px;
+        height: 30px;
+    }
+    .footer .Email button{
+        cursor: pointer;
+        width: 80px;
+        height: 30px;
+        margin-top: 10px;
+        background-color: rgb(36, 167, 36);
+        outline: none;
+        border: none;
+        color: white;
+        border-radius: 5px;
+        box-shadow: -2px 2px 4px rgba(255, 255, 255, 0.543);
+        font-weight: bold;
+        outline: none;
+        transition: all 0.2s linear;
+        font-size: 16px;
+        padding: 5px 5px;
+    }
+    .footer .Email button:active{
+        transform: scale(1.1);
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer .logo-footer{
+        width: 85%;
+        margin-top: 10px;
+       border-top: 5px solid lime;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer .logo-footer i{
+        color: lime;
+        font-size: 39px;
+        padding: 10px 10px;
+    }
+}
+                                                                        /* max-width:1340 */
+@media (min-width:1340px){
+    .container .footer{
+        height: 350px;
+        margin-top: 2260px;
+        background-color:black;
+    }
+    .container .footer.active{
+        margin-top: 780px;
+        background-color:black;
+    }
+}
+                                                                        /* max-width:1600 */
+@media (min-width:1600px){
+    .container .footer{
+        height: 350px;
+        margin-top: 1960px;
+        background-color:black;
+    }
+    .container .footer.active{
+        margin-top: 780px;
+        background-color:black;
+    }
+    .footer .footer-information{
+        width: 100%;
+        display: flex;
+        margin-left: -90px;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .footer .about{
+        margin-left: 100px;
+    }
+    .footer .about h1{
+        color: lime;
+        font-size: 35px;
+        font-family: sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+    .footer .about h3{
+        color: white;
+        font-size: 25px;
+        margin-top: 15px;
+    }
+    .footer .about p{
+     color: white;
+     margin-top: 5px;
+     font-size: 20px;
+    }
+    .footer .about a{
+        display: flex;
+        margin-top: 7px;
+        font-size: 25px;
+        text-decoration: none;
+        color: lime;
+    }
+    .footer .about a span{
+        margin-left: 15px;
+        color: white;
+        font-size: 20px;
+    }
+    .footer .information ul{
+        list-style-type: none;
+    }
+    .footer .information ul li{
+      color: white;
+      font-size: 27px;
+      margin-top: 20px;
+    }
+    .footer .information ul li.infor{
+        color: lime;
+    }
+    .footer .Email h3{
+        color: white;
+        font-size: 25px;
+        margin-top: 15px;
+    }
+    .footer .Email input{
+        width: 200px;
+        height: 30px;
+        font-size: 17px;
+        padding: 0px 30px;
+        border-radius: 7px;
+        box-shadow: 5px;
+        margin-top: 8px;
+    }
+    .footer .Email .iconEmail{
+        position: relative;
+    }
+    .footer .Email i{
+        margin-top: 8px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: none;
+        border-right: 2px solid black;
+        color: lime;
+        font-weight: bolder;
+        width: 30px;
+        height: 30px;
+    }
+    .footer .Email button{
+        cursor: pointer;
+        width: 80px;
+        height: 30px;
+        margin-top: 10px;
+        background-color: rgb(36, 167, 36);
+        outline: none;
+        border: none;
+        color: white;
+        border-radius: 5px;
+        box-shadow: -2px 2px 4px rgba(255, 255, 255, 0.543);
+        font-weight: bold;
+        outline: none;
+        transition: all 0.2s linear;
+        font-size: 16px;
+        padding: 5px 5px;
+    }
+    .footer .Email button:active{
+        transform: scale(1.1);
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer .logo-footer{
+        width: 85%;
+        margin-top: 10px;
+       border-top: 5px solid lime;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer .logo-footer i{
+        color: lime;
+        font-size: 39px;
+        padding: 10px 10px;
+    }
+}
