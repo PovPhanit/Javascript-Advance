@@ -1,5 +1,5 @@
-C#-Advance
-welcome to advance c# with me
+Javascript-Advance
+welcome to advance javascript with me
 - 👋 Hi, I’m @PovPhanit
 - 👀 I’m interested in ...
 - 🌱 I’m currently learning ...
