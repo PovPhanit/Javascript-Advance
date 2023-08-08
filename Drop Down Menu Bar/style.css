@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    width: 100%;
+    height: 100vh;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+.container .menu-bar{
+    width: 100%;
+    background-color: RED;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container .menu-bar .logo-name li{
+    color: white;
+    margin-left: 50px;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.container .menu-bar ul{
+    list-style-type: none;
+}
+.container .menu-bar .group-bar{
+    display: flex;
+    flex-direction: row;
+}
+.container .menu-bar .group-bar li a{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    font-size: 25px;
+}
+.container .menu-bar .group-bar{
+    margin-right: 40px;
+   position: relative;
+}
+.container .menu-bar .group-bar .test{
+    display: none;
+    position: absolute;
+    background-color: rgb(209, 30, 30);
+}
+.container .menu-bar .group-bar .active{
+    display: block;
+}
+.container .menu-bar .group-bar .test li a{
+    color: white;
+}
+.container .menu-bar .group-bar .test li{
+   height: 40px;
+   margin-top: 20px;
+}
+.container .menu-bar .group-bar li:hover {
+    background-color: blue;
+}
+.container .menu-bar .test li:hover {
+    background-color: blue;
+}
